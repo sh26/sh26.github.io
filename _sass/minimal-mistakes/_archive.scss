@@ -6,7 +6,7 @@
   margin-top: 1em;
   margin-bottom: 2em;
 
-  @include breakpoint($large) {
+  @include breakpoint($medium) {
     float: right;
     width: calc(100% - #{$right-sidebar-width-narrow});
     padding-right: $right-sidebar-width-narrow;
@@ -85,13 +85,14 @@
 
   /* Teaser link and image */
   .archive__item-teaser-link {
-    width: 150px; /* Fixed width for teaser image */
-    height: 150px; /* Fixed height for teaser image */
     text-decoration: none;
     align-self: center; /* Aligns teaser image vertically with the title */
   }
 
   .archive__item-teaser {
+    flex: 0 0 auto;
+    width: 130px; /* Fixed width for teaser image */
+    height: 130px; /* Fixed height for teaser image */
     margin-bottom: 1em;
   }
 
