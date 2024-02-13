@@ -8,7 +8,7 @@
   margin-left: 0;
   margin-right: 0;
   width: 100%;
-  margin-top: 3em;
+  margin-top: 1em;
   color: $muted-text-color;
   -webkit-animation: $intro-transition;
   animation: $intro-transition;
@@ -20,9 +20,11 @@
     @include clearfix;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 2em;
+    margin-top: 0.75em;
+    margin-bottom: 0.75em;
     max-width: 100%;
-    padding: 0 1em 2em;
+    padding: 0;
+    display: block;
 
     @include breakpoint($x-large) {
       max-width: $x-large;
@@ -48,7 +50,12 @@
 
 .page__footer-copyright {
   font-family: $global-font-family;
-  font-size: $type-size-7;
+  font-size: 0.6rem;
+}
+
+.page__footer-custom-copyright {
+  font-family: $global-font-family;
+  font-size: 0.6rem
 }
 
 .page__footer-follow {
@@ -60,8 +67,8 @@
 
   li {
     display: inline-block;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
     font-family: $sans-serif-narrow;
     font-size: $type-size-6;
     text-transform: uppercase;

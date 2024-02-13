@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
 {% if post.header.teaser %}
   {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
 {% else %}
@@ -12,19 +14,26 @@
 
 <div class="{{ include.type | default: 'list' }}__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    {% if include.type == "grid" and teaser %}
-      <div class="archive__item-teaser">
-        <img src="{{ teaser | relative_url }}" alt="">
+    <div class="archive__item-text">
+      <a href="{{ post.url | relative_url }}" class="archive__item-title-link" rel="bookmark">
+        <h2 class="archive__item-title" itemprop="headline">{{ post.title }}</h2>
+      </a>
+      <a href="{{ post.url | relative_url }}" class="archive__item-content-link" rel="bookmark">
+        <p class="archive__item-content" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 160 }}</p>
+      </a>
+      <div class="archive__item-meta">
+        <i class="xi-time-o"></i>
+        <time class="archive__item-date">{{ post.date | date: '%Y.%m.%d' }}</time>
+        <span class="line_bar">|</span>
+        <i class="xi-eye"></i>
+        <span class="archive__item-view-count">Views: 0</span>
       </div>
-    {% endif %}
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      {% if post.link %}
-        <a href="{{ post.link }}">{{ title }}</a> <a href="{{ post.url | relative_url }}" rel="permalink"><i class="fas fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
-      {% else %}
-        <a href="{{ post.url | relative_url }}" rel="permalink">{{ title }}</a>
-      {% endif %}
-    </h2>
-    {% include page__meta.html type=include.type %}
-    {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 160 }}</p>{% endif %}
+    </div>
+    <div class="archive__item-teaser">
+      <a href="{{ post.url | relative_url }}" class="archive__item-teaser-link" rel="bookmark">
+        <img src="{{ post.teaser | relative_url }}" alt="{{ post.title | escape }}">
+      </a>
+    </div>
+    <hr class="archive__item-divider">
   </article>
 </div>
