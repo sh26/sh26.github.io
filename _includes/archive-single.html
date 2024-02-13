@@ -31,7 +31,7 @@
     </div>
     <div class="archive__item-teaser">
       <a href="{{ post.url | relative_url }}" class="archive__item-teaser-link" rel="bookmark">
-        <img src="{{ post.teaser | relative_url }}" alt="{{ post.title | escape }}">
+        <img src="{{ post.teaser | default: site.teaser | relative_url }}" alt="{{ post.title | escape }}">
       </a>
     </div>
     <hr class="archive__item-divider">
