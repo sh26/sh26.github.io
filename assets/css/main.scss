@@ -6,3 +6,32 @@
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+
+@import url('https://fonts.googleapis.com/earlyaccess/nanumgothic.css');
+
+/* NanumGothic 폰트를 가져오기 */
+
+@font-face {
+    font-family: 'NanumGothic';
+    font-style: normal;
+    font-weight: 400;
+    src: local('NanumGothic'), local('NanumGothic-Regular'),
+         url(https://fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.woff2) format('woff2'),
+         url(https://fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.woff) format('woff');
+}
+
+/* D2Coding 폰트 가져오기 */
+
+@font-face {
+    font-family: "D2Coding";
+    src: url("../fonts/D2Coding-Ver1.3.2-20180524.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "D2Coding";
+    src: url("../fonts/D2CodingBold-Ver1.3.2-20180524.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
