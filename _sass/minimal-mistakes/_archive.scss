@@ -71,6 +71,7 @@
 
   /* Meta style */
   .archive__item-meta {
+    margin-bottom: 1em;
     display: flex;
     align-items: center;
     font-size: 14px; /* Adjust as needed */
@@ -84,13 +85,13 @@
 
   /* Teaser link and image */
   .archive__item-teaser-link {
+    width: 150px; /* Fixed width for teaser image */
+    height: 150px; /* Fixed height for teaser image */
     text-decoration: none;
     align-self: center; /* Aligns teaser image vertically with the title */
   }
 
   .archive__item-teaser {
-    width: 150px; /* Fixed width for teaser image */
-    height: 150px; /* Fixed height for teaser image */
     margin-bottom: 1em;
   }
 
@@ -212,16 +213,6 @@
       font-size: $type-size-6;
     }
   }
-
-  .archive__item-teaser {
-    @include breakpoint($small) {
-      max-height: 200px;
-    }
-
-    @include breakpoint($medium) {
-      max-height: 120px;
-    }
-  }
 }
 
 /*
@@ -296,10 +287,6 @@
       float: left;
     }
 
-    .archive__item-teaser {
-      margin-bottom: 2em;
-    }
-
     a.btn::before {
       content: '';
       position: absolute;
@@ -310,11 +297,6 @@
     }
 
     @include breakpoint($small) {
-      .archive__item-teaser {
-        float: left;
-        width: span(5 of 12);
-      }
-
       .archive__item-body {
         float: right;
         padding-left: gutter(0.5 of 12);
@@ -337,10 +319,6 @@
       float: left;
     }
 
-    .archive__item-teaser {
-      margin-bottom: 2em;
-    }
-
     a.btn::before {
       content: '';
       position: absolute;
@@ -352,11 +330,6 @@
 
     @include breakpoint($small) {
       text-align: right;
-
-      .archive__item-teaser {
-        float: right;
-        width: span(5 of 12);
-      }
 
       .archive__item-body {
         float: left;
@@ -381,10 +354,6 @@
       width: 100%;
     }
 
-    .archive__item-teaser {
-      margin-bottom: 2em;
-    }
-
     a.btn::before {
       content: '';
       position: absolute;
@@ -392,20 +361,6 @@
       top: 0;
       right: 0;
       bottom: 0;
-    }
-
-    @include breakpoint($small) {
-      text-align: center;
-
-      .archive__item-teaser {
-        margin: 0 auto;
-        width: span(5 of 12);
-      }
-
-      .archive__item-body {
-        margin: 0 auto;
-        width: span(7 of 12);
-      }
     }
   }
 }
