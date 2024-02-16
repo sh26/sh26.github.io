@@ -96,8 +96,8 @@ author:
   name             : "Park Seong Ho"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "I will find the essence."
-  location         : "Seoul"
-  email            : sh26@kakao.com
+  # location         : "Seoul"
+  # email            : sh26@kakao.com
   links:
     # - label: "Email"
     #   icon: "fas fa-fw fa-envelope-square"
